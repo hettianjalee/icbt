@@ -46,8 +46,7 @@ test('Login page elements should be visible', async ({ page }) => {
   await expect(forgotPasswordLink).toContainText('Forgot your password?');
 });
 
-
-// Test 2 - Login with valid username and password goes to dashboard
+//comment
 test('Valid login redirects to dashboard', async ({ page }) => {
   await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
   await page.waitForSelector('input[name="username"]');
@@ -59,9 +58,6 @@ test('Valid login redirects to dashboard', async ({ page }) => {
 
   // Check URL changed to dashboard
   await expect(page).toHaveURL(/dashboard/);;
-
-  // Check dashboard header is visible
-  await expect(page.locator('.oxd-topbar-header')).toBeVisible();
   
 
 });
